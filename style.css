@@ -1,4 +1,3 @@
-/* تنظیمات کلی */
 * {
     margin: 0;
     padding: 0;
@@ -7,7 +6,7 @@
 }
 
 body {
-    background-color: #1a2233; /* رنگ پس زمینه تیره */
+    background-color: #1a2233;
     color: #ffffff;
     line-height: 1.6;
 }
@@ -64,7 +63,7 @@ nav ul li a:hover {
     color: #eab308;
 }
 
-/* بخش بنر تصویر (Hero) */
+/* --- اصلاح اساسی بخش بنر (Hero) --- */
 .hero-section {
     margin-top: 30px;
 }
@@ -72,16 +71,18 @@ nav ul li a:hover {
 .hero-image-wrapper {
     position: relative;
     width: 100%;
+    height: 350px; /* ارتفاع ثابت برای جلوگیری از به هم ریختگی */
     border-radius: 15px;
     overflow: hidden;
     border: 1px solid #4a5568;
+    background-color: #2d3748; 
 }
 
 .hero-bg {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover; 
     display: block;
-    opacity: 0.8;
 }
 
 .hero-overlay {
@@ -94,7 +95,7 @@ nav ul li a:hover {
     justify-content: space-between;
     align-items: center;
     padding: 40px;
-    background: rgba(0, 0, 0, 0.4);
+    background: linear-gradient(to left, rgba(0,0,0,0.8), rgba(0,0,0,0.2)); /* گرادیانت برای خوانایی بهتر */
 }
 
 .hero-left {
@@ -153,6 +154,7 @@ nav ul li a:hover {
     font-size: 16px;
     cursor: pointer;
 }
+/* --------------------------------- */
 
 /* بخش خوش آمدگویی */
 .welcome-section {
@@ -162,6 +164,7 @@ nav ul li a:hover {
     margin-top: 30px;
     text-align: center;
     border: 1px solid #4a5568;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
 .welcome-section h2 {
@@ -182,19 +185,23 @@ nav ul li a:hover {
 /* دکمه‌های شبکه‌های اجتماعی */
 .social-buttons {
     display: flex;
-    justify-content: center;
+    justify-content: center; 
+    align-items: center;
     gap: 15px;
     flex-wrap: wrap;
+    width: 100%;
 }
 
 .btn {
-    padding: 10px 30px;
+    padding: 10px 35px;
     border-radius: 25px;
     color: white;
     text-decoration: none;
     font-weight: bold;
     font-size: 16px;
     transition: transform 0.3s, opacity 0.3s;
+    text-align: center;
+    min-width: 120px;
 }
 
 .btn:hover {
@@ -204,26 +211,33 @@ nav ul li a:hover {
 
 .btn-bale { background-color: #22c55e; }
 .btn-telegram { background-color: #0ea5e9; }
-.btn-aparat { background-color: #ec4899; }
-.btn-youtube { background-color: #ef4444; }
-
-/* بخش آخرین پست‌ها */
-.latest-posts {
-    margin-top: 40px;
-    margin-bottom: 40px;
-    border-top: 2px solid #eab308;
-    padding-top: 20px;
+/* استایل گرادیانت اختصاصی اینستاگرام */
+.btn-instagram { 
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
 }
 
-.section-title h3 {
+/* بخش آخرین پست‌ها */
+.latest-posts-section {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.section-title-wrapper {
+    border-top: 2px solid #eab308;
+    padding-top: 20px;
+    margin-bottom: 20px;
+}
+
+.section-title-wrapper h3 {
     color: #eab308;
     font-size: 22px;
-    margin-bottom: 20px;
+    text-align: right;
 }
 
 .posts-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 20px;
 }
 
@@ -232,16 +246,23 @@ nav ul li a:hover {
     border-radius: 10px;
     overflow: hidden;
     border: 1px solid #4a5568;
+    transition: transform 0.3s;
+}
+
+.post-card:hover {
+    transform: translateY(-5px);
 }
 
 .post-card img {
     width: 100%;
     height: 180px;
     object-fit: cover;
+    border-bottom: 1px solid #4a5568;
 }
 
 .post-card h4 {
     padding: 15px;
     font-size: 16px;
     text-align: center;
+    color: #fff;
 }
