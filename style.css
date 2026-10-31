@@ -1,0 +1,247 @@
+/* تنظیمات کلی */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Vazirmatn', sans-serif;
+}
+
+body {
+    background-color: #1a2233; /* رنگ پس زمینه تیره */
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* نوار بالای سایت */
+.top-bar {
+    background-color: #111827;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+    color: #a0aec0;
+    border-bottom: 1px solid #2d3748;
+}
+
+/* هدر و منو */
+header {
+    border-bottom: 2px solid #eab308;
+    padding: 20px 0;
+    background-color: #1a2233;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    color: #eab308;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #eab308;
+}
+
+/* بخش بنر تصویر (Hero) */
+.hero-section {
+    margin-top: 30px;
+}
+
+.hero-image-wrapper {
+    position: relative;
+    width: 100%;
+    border-radius: 15px;
+    overflow: hidden;
+    border: 1px solid #4a5568;
+}
+
+.hero-bg {
+    width: 100%;
+    height: auto;
+    display: block;
+    opacity: 0.8;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.hero-left {
+    text-align: left;
+    color: #fff;
+    border-left: 2px solid #fff;
+    padding-left: 15px;
+}
+
+.hero-left h2 {
+    font-size: 28px;
+    letter-spacing: 2px;
+}
+
+.hero-left p {
+    font-size: 14px;
+    color: #ccc;
+}
+
+.hero-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.btn-subscribe {
+    background-color: #ef4444;
+    color: white;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: inherit;
+    transition: 0.3s;
+}
+
+.btn-subscribe:hover {
+    background-color: #dc2626;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.icon {
+    background-color: #ef4444;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* بخش خوش آمدگویی */
+.welcome-section {
+    background-color: #273142;
+    border-radius: 15px;
+    padding: 40px;
+    margin-top: 30px;
+    text-align: center;
+    border: 1px solid #4a5568;
+}
+
+.welcome-section h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.highlight {
+    color: #eab308;
+}
+
+.welcome-section p {
+    color: #cbd5e1;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+/* دکمه‌های شبکه‌های اجتماعی */
+.social-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 10px 30px;
+    border-radius: 25px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    opacity: 0.9;
+}
+
+.btn-bale { background-color: #22c55e; }
+.btn-telegram { background-color: #0ea5e9; }
+.btn-aparat { background-color: #ec4899; }
+.btn-youtube { background-color: #ef4444; }
+
+/* بخش آخرین پست‌ها */
+.latest-posts {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    border-top: 2px solid #eab308;
+    padding-top: 20px;
+}
+
+.section-title h3 {
+    color: #eab308;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.posts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.post-card {
+    background-color: #273142;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #4a5568;
+}
+
+.post-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.post-card h4 {
+    padding: 15px;
+    font-size: 16px;
+    text-align: center;
+}
