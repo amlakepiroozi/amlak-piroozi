@@ -1,3 +1,4 @@
+/* تنظیمات کلی و ریست */
 * {
     margin: 0;
     padding: 0;
@@ -5,9 +6,10 @@
     font-family: 'Vazirmatn', sans-serif;
 }
 
+/* بک گراند طوسی روشن */
 body {
-    background-color: #1a2233;
-    color: #ffffff;
+    background-color: #e2e8f0; 
+    color: #1a202c; /* متن‌ها تیره شدند تا روی پس‌زمینه روشن خوانا باشند */
     line-height: 1.6;
 }
 
@@ -19,19 +21,19 @@ body {
 
 /* نوار بالای سایت */
 .top-bar {
-    background-color: #111827;
+    background-color: #cbd5e1;
     text-align: center;
     padding: 10px 0;
     font-size: 14px;
-    color: #a0aec0;
-    border-bottom: 1px solid #2d3748;
+    color: #475569;
+    border-bottom: 1px solid #94a3b8;
 }
 
 /* هدر و منو */
 header {
-    border-bottom: 2px solid #eab308;
+    border-bottom: 2px solid #1e3a8a; /* خط آبی تیره */
     padding: 20px 0;
-    background-color: #1a2233;
+    background-color: #e2e8f0;
 }
 
 .header-content {
@@ -41,7 +43,7 @@ header {
 }
 
 .logo h1 {
-    color: #eab308;
+    color: #1e3a8a; /* لوگو آبی تیره */
     font-size: 24px;
     font-weight: bold;
 }
@@ -53,17 +55,17 @@ nav ul {
 }
 
 nav ul li a {
-    color: #ffffff;
+    color: #1a202c;
     text-decoration: none;
     font-size: 16px;
     transition: color 0.3s;
 }
 
 nav ul li a:hover {
-    color: #eab308;
+    color: #1e3a8a; /* هاور آبی تیره */
 }
 
-/* --- اصلاح اساسی بخش بنر (Hero) --- */
+/* بخش بنر (Hero) */
 .hero-section {
     margin-top: 30px;
 }
@@ -71,11 +73,11 @@ nav ul li a:hover {
 .hero-image-wrapper {
     position: relative;
     width: 100%;
-    height: 350px; /* ارتفاع ثابت برای جلوگیری از به هم ریختگی */
+    height: 380px;
     border-radius: 15px;
     overflow: hidden;
-    border: 1px solid #4a5568;
-    background-color: #2d3748; 
+    border: 1px solid #94a3b8;
+    background-color: #cbd5e1; 
 }
 
 .hero-bg {
@@ -95,7 +97,7 @@ nav ul li a:hover {
     justify-content: space-between;
     align-items: center;
     padding: 40px;
-    background: linear-gradient(to left, rgba(0,0,0,0.8), rgba(0,0,0,0.2)); /* گرادیانت برای خوانایی بهتر */
+    background: linear-gradient(to left, rgba(0,0,0,0.85), rgba(0,0,0,0.2));
 }
 
 .hero-left {
@@ -106,7 +108,7 @@ nav ul li a:hover {
 }
 
 .hero-left h2 {
-    font-size: 28px;
+    font-size: 32px;
     letter-spacing: 2px;
 }
 
@@ -154,30 +156,30 @@ nav ul li a:hover {
     font-size: 16px;
     cursor: pointer;
 }
-/* --------------------------------- */
 
 /* بخش خوش آمدگویی */
 .welcome-section {
-    background-color: #273142;
+    background-color: #f8fafc; /* پس زمینه باکس سفید/طوسی خیلی روشن */
     border-radius: 15px;
     padding: 40px;
     margin-top: 30px;
     text-align: center;
-    border: 1px solid #4a5568;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    border: 1px solid #cbd5e1;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
 
 .welcome-section h2 {
     font-size: 28px;
     margin-bottom: 15px;
+    color: #1e293b;
 }
 
 .highlight {
-    color: #eab308;
+    color: #1e3a8a; /* متن هایلایت آبی تیره */
 }
 
 .welcome-section p {
-    color: #cbd5e1;
+    color: #475569;
     font-size: 16px;
     margin-bottom: 30px;
 }
@@ -201,7 +203,7 @@ nav ul li a:hover {
     font-size: 16px;
     transition: transform 0.3s, opacity 0.3s;
     text-align: center;
-    min-width: 120px;
+    min-width: 130px;
 }
 
 .btn:hover {
@@ -209,9 +211,8 @@ nav ul li a:hover {
     opacity: 0.9;
 }
 
-.btn-bale { background-color: #22c55e; }
 .btn-telegram { background-color: #0ea5e9; }
-/* استایل گرادیانت اختصاصی اینستاگرام */
+/* دکمه اینستاگرام با رنگ اصلی خودش */
 .btn-instagram { 
     background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
 }
@@ -224,13 +225,13 @@ nav ul li a:hover {
 }
 
 .section-title-wrapper {
-    border-top: 2px solid #eab308;
+    border-top: 2px solid #1e3a8a; /* خط بالای عنوان آبی تیره */
     padding-top: 20px;
     margin-bottom: 20px;
 }
 
 .section-title-wrapper h3 {
-    color: #eab308;
+    color: #1e3a8a; /* عنوان آبی تیره */
     font-size: 22px;
     text-align: right;
 }
@@ -242,27 +243,28 @@ nav ul li a:hover {
 }
 
 .post-card {
-    background-color: #273142;
+    background-color: #f8fafc;
     border-radius: 10px;
     overflow: hidden;
-    border: 1px solid #4a5568;
-    transition: transform 0.3s;
+    border: 1px solid #cbd5e1;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .post-card:hover {
     transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
 }
 
 .post-card img {
     width: 100%;
     height: 180px;
     object-fit: cover;
-    border-bottom: 1px solid #4a5568;
+    border-bottom: 1px solid #cbd5e1;
 }
 
 .post-card h4 {
     padding: 15px;
     font-size: 16px;
     text-align: center;
-    color: #fff;
+    color: #1e293b;
 }
