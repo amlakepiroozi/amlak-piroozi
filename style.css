@@ -1,270 +1,275 @@
-/* تنظیمات کلی و ریست */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Vazirmatn', sans-serif;
 }
 
-/* بک گراند طوسی روشن */
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    background-color: #e2e8f0; 
-    color: #1a202c; /* متن‌ها تیره شدند تا روی پس‌زمینه روشن خوانا باشند */
-    line-height: 1.6;
+    direction: rtl;
+    font-family: 'Vazirmatn', sans-serif;
+    background: #171d2b;
+    color: #f5f5f5;
 }
 
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
+/* Header */
+
+.header {
+    background: #202839;
+    border-bottom: 2px solid #d5b735;
 }
 
-/* نوار بالای سایت */
-.top-bar {
-    background-color: #cbd5e1;
+.date {
     text-align: center;
-    padding: 10px 0;
+    padding: 18px;
+    color: #aeb8c9;
     font-size: 14px;
-    color: #475569;
-    border-bottom: 1px solid #94a3b8;
+    border-bottom: 1px solid #343d50;
 }
 
-/* هدر و منو */
-header {
-    border-bottom: 2px solid #1e3a8a; /* خط آبی تیره */
-    padding: 20px 0;
-    background-color: #e2e8f0;
-}
-
-.header-content {
+.navbar {
+    min-height: 85px;
+    padding: 15px 5%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.logo h1 {
-    color: #1e3a8a; /* لوگو آبی تیره */
-    font-size: 24px;
-    font-weight: bold;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 30px;
-}
-
-nav ul li a {
-    color: #1a202c;
-    text-decoration: none;
-    font-size: 16px;
-    transition: color 0.3s;
-}
-
-nav ul li a:hover {
-    color: #1e3a8a; /* هاور آبی تیره */
-}
-
-/* بخش بنر (Hero) */
-.hero-section {
-    margin-top: 30px;
-}
-
-.hero-image-wrapper {
-    position: relative;
-    width: 100%;
-    height: 380px;
-    border-radius: 15px;
-    overflow: hidden;
-    border: 1px solid #94a3b8;
-    background-color: #cbd5e1; 
-}
-
-.hero-bg {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; 
-    display: block;
-}
-
-.hero-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 40px;
-    background: linear-gradient(to left, rgba(0,0,0,0.85), rgba(0,0,0,0.2));
-}
-
-.hero-left {
-    text-align: left;
-    color: #fff;
-    border-left: 2px solid #fff;
-    padding-left: 15px;
-}
-
-.hero-left h2 {
-    font-size: 32px;
-    letter-spacing: 2px;
-}
-
-.hero-left p {
-    font-size: 14px;
-    color: #ccc;
-}
-
-.hero-right {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-}
-
-.btn-subscribe {
-    background-color: #ef4444;
-    color: white;
-    border: none;
-    padding: 10px 30px;
-    border-radius: 25px;
-    font-weight: bold;
-    cursor: pointer;
-    font-family: inherit;
-    transition: 0.3s;
-}
-
-.btn-subscribe:hover {
-    background-color: #dc2626;
-}
-
-.social-icons {
-    display: flex;
-    gap: 10px;
-}
-
-.icon {
-    background-color: #ef4444;
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-/* بخش خوش آمدگویی */
-.welcome-section {
-    background-color: #f8fafc; /* پس زمینه باکس سفید/طوسی خیلی روشن */
-    border-radius: 15px;
-    padding: 40px;
-    margin-top: 30px;
-    text-align: center;
-    border: 1px solid #cbd5e1;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-}
-
-.welcome-section h2 {
-    font-size: 28px;
-    margin-bottom: 15px;
-    color: #1e293b;
-}
-
-.highlight {
-    color: #1e3a8a; /* متن هایلایت آبی تیره */
-}
-
-.welcome-section p {
-    color: #475569;
-    font-size: 16px;
-    margin-bottom: 30px;
-}
-
-/* دکمه‌های شبکه‌های اجتماعی */
-.social-buttons {
-    display: flex;
-    justify-content: center; 
-    align-items: center;
-    gap: 15px;
-    flex-wrap: wrap;
-    width: 100%;
-}
-
-.btn {
-    padding: 10px 35px;
-    border-radius: 25px;
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 16px;
-    transition: transform 0.3s, opacity 0.3s;
-    text-align: center;
-    min-width: 130px;
-}
-
-.btn:hover {
-    transform: translateY(-3px);
-    opacity: 0.9;
-}
-
-.btn-telegram { background-color: #0ea5e9; }
-/* دکمه اینستاگرام با رنگ اصلی خودش */
-.btn-instagram { 
-    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
-}
-
-/* بخش آخرین پست‌ها */
-.latest-posts-section {
-    margin-top: 50px;
-    margin-bottom: 50px;
-    position: relative;
-}
-
-.section-title-wrapper {
-    border-top: 2px solid #1e3a8a; /* خط بالای عنوان آبی تیره */
-    padding-top: 20px;
-    margin-bottom: 20px;
-}
-
-.section-title-wrapper h3 {
-    color: #1e3a8a; /* عنوان آبی تیره */
-    font-size: 22px;
-    text-align: right;
-}
-
-.posts-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 20px;
 }
 
-.post-card {
-    background-color: #f8fafc;
-    border-radius: 10px;
-    overflow: hidden;
-    border: 1px solid #cbd5e1;
-    transition: transform 0.3s, box-shadow 0.3s;
+.logo {
+    font-size: 25px;
+    font-weight: 800;
+    color: white;
+    text-decoration: none;
 }
 
-.post-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+.logo span,
+h2 span {
+    color: #e6c547;
 }
 
-.post-card img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-    border-bottom: 1px solid #cbd5e1;
+.nav-links {
+    display: flex;
+    gap: 28px;
+    flex-wrap: wrap;
 }
 
-.post-card h4 {
-    padding: 15px;
-    font-size: 16px;
+.nav-links a {
+    text-decoration: none;
+    color: #e4e7ed;
+    transition: .3s;
+}
+
+.nav-links a:hover {
+    color: #e6c547;
+}
+
+/* Hero */
+
+.hero {
+    margin: 55px auto;
+    width: 90%;
+    max-width: 1050px;
+    padding: 65px 25px;
     text-align: center;
-    color: #1e293b;
+    border: 1px solid rgba(255,255,255,.12);
+    border-radius: 30px;
+
+    background: linear-gradient(
+        145deg,
+        rgba(66,78,100,.55),
+        rgba(31,40,58,.85)
+    );
+
+    box-shadow:
+        15px 15px 35px rgba(0,0,0,.25),
+        inset 2px 2px 10px rgba(255,255,255,.06),
+        inset -2px -2px 10px rgba(0,0,0,.2);
+
+    backdrop-filter: blur(15px);
+}
+
+.tag {
+    display: inline-block;
+    padding: 10px 22px;
+    border-radius: 30px;
+    color: #e6c547;
+    background: rgba(230,197,71,.10);
+    border: 1px solid rgba(230,197,71,.3);
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-size: clamp(27px, 5vw, 43px);
+    line-height: 1.9;
+    font-weight: 800;
+}
+
+.hero h1 span {
+    color: #e6c547;
+}
+
+.description {
+    color: #b9c2d1;
+    font-size: 17px;
+    line-height: 2.2;
+    max-width: 650px;
+    margin: 20px auto 35px;
+}
+
+/* Social buttons */
+
+.social-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 22px;
+}
+
+.social {
+    min-width: 175px;
+    padding: 15px 28px;
+    text-decoration: none;
+    color: white;
+    border-radius: 22px;
+    font-size: 18px;
+    font-weight: 700;
+
+    box-shadow:
+        7px 7px 16px rgba(0,0,0,.25),
+        inset 2px 2px 7px rgba(255,255,255,.3),
+        inset -3px -3px 8px rgba(0,0,0,.15);
+
+    transition: .3s;
+}
+
+.social:hover {
+    transform: translateY(-5px);
+    filter: brightness(1.12);
+}
+
+.telegram {
+    background: linear-gradient(145deg,#38bdf8,#0878d1);
+}
+
+.bale {
+    background: linear-gradient(145deg,#36d77b,#13a957);
+}
+
+.social span {
+    margin-left: 8px;
+}
+
+/* Services */
+
+.services,
+.contact,
+.articles {
+    width: 90%;
+    max-width: 1100px;
+    margin: 70px auto;
+    text-align: center;
+}
+
+h2 {
+    font-size: 27px;
+    margin-bottom: 35px;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 25px;
+}
+
+.service-card,
+.contact-box {
+    padding: 30px 20px;
+    border-radius: 25px;
+
+    background: linear-gradient(145deg,#293449,#1d2637);
+
+    box-shadow:
+        10px 10px 25px rgba(0,0,0,.25),
+        inset 1px 1px 5px rgba(255,255,255,.08);
+}
+
+.service-card h3 {
+    margin: 15px 0;
+    color: #e6c547;
+}
+
+.service-card p,
+.articles p {
+    color: #aeb8c9;
+    line-height: 2;
+}
+
+.service-icon {
+    font-size: 42px;
+    color: #e6c547;
+}
+
+.contact-box {
+    max-width: 700px;
+    margin: auto;
+    text-align: right;
+    line-height: 3;
+    color: #d5dce8;
+}
+
+.contact-box strong {
+    color: #e6c547;
+}
+
+.contact-box a {
+    color: #45b8ff;
+    text-decoration: none;
+}
+
+/* Footer */
+
+footer {
+    text-align: center;
+    padding: 25px;
+    background: #111724;
+    color: #929eb1;
+    border-top: 1px solid #d5b735;
+}
+
+/* Mobile */
+
+@media (max-width: 700px) {
+
+    .navbar {
+        flex-direction: column;
+    }
+
+    .nav-links {
+        justify-content: center;
+        gap: 15px;
+        font-size: 13px;
+    }
+
+    .hero {
+        margin: 30px auto;
+        padding: 45px 18px;
+    }
+
+    .description {
+        font-size: 14px;
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .social {
+        min-width: 145px;
+    }
+
 }
